@@ -1,0 +1,922 @@
+ubuntu@ubuntu:~/openssl-jostle$ ./gradlew clean build
+WARNING: A restricted method in java.lang.System has been called
+WARNING: java.lang.System::load has been called by net.rubygrapefruit.platform.internal.NativeLibraryLoader in an unnamed module (file:/home/ubuntu/.gradle/wrapper/dists/gradle-9.1.0-bin/9agqghryom9wkf8r80qlhnts3/gradle-9.1.0/lib/native-platform-0.22-milestone-28.jar)
+WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+
+> Task :jostle:compileJava
+warning: [options] source value 8 is obsolete and will be removed in a future release
+warning: [options] target value 8 is obsolete and will be removed in a future release
+warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+3 warnings
+
+> Task :jostle:compileJava9Java
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+
+> Task :jostle:compileTestJava
+warning: [options] source value 8 is obsolete and will be removed in a future release
+warning: [options] target value 8 is obsolete and will be removed in a future release
+warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+3 warnings
+WARNING: A restricted method in java.lang.System has been called
+WARNING: java.lang.System::load has been called by org.openssl.jostle.Loader in an unnamed module (file:/home/ubuntu/openssl-jostle/jostle/build/classes/java/main/)
+WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+
+> Task :jostle:test
+
+ExpectedJVMTest > testExpectedJVMVersion() PASSED
+
+ExpectedJVMTest > testExpectedInterface() PASSED
+
+ASN1UtilOpsTest > opsTestDecodePublicKey_Int32Overflow() PASSED
+
+ASN1UtilOpsTest > opsTestGetData_Int32Overflow() PASSED
+
+ASN1UtilOpsTest > opsTestDecodePrivateKey_Int32Overflow() PASSED
+
+ASN1UtilOpsTest > opsTestGetData_accessByteArray() PASSED
+
+ASN1UtilOpsTest > opsTestEncodePublicKey_Int32Overflow() PASSED
+
+ASN1UtilOpsTest > opsTestEncodePrivateKey_Int32Overflow() PASSED
+
+Asn1LimitTest > fromPublicKey_dodgyDataTooShort() PASSED
+
+Asn1LimitTest > fromPrivateKeyInfo_inOutOfRange() PASSED
+
+Asn1LimitTest > fromPublicKeyInfo_inOutOfRange() PASSED
+
+Asn1LimitTest > encodePrivateKey_output_wrong_size() PASSED
+
+Asn1LimitTest > fromPrivateKeyInfo_inIsNull() PASSED
+
+Asn1LimitTest > fromPrivateKeyInfo_inLenNeg() PASSED
+
+Asn1LimitTest > fromPrivateKeyInfo_inOffNeg() PASSED
+
+Asn1LimitTest > encodePublicKey_specNullKeyTest() PASSED
+
+Asn1LimitTest > encodePrivateKey_keyNullInSpec() PASSED
+
+Asn1LimitTest > allocDeallocTest() PASSED
+
+Asn1LimitTest > encodePublicKey_specNullTest() PASSED
+
+Asn1LimitTest > encodePrivateKey_specNullKeyTest() PASSED
+
+Asn1LimitTest > fromPublicKey_dodgyData() PASSED
+
+Asn1LimitTest > fromPublicKeyInfo_inIsNull() PASSED
+
+Asn1LimitTest > encodePublicKey_keyNullInSpec() PASSED
+
+Asn1LimitTest > fromPublicKeyInfo_inLenNeg() PASSED
+
+Asn1LimitTest > fromPublicKeyInfo_inOffNeg() PASSED
+
+Asn1LimitTest > encodePublicKey_output_wrong_size() PASSED
+
+Asn1LimitTest > fromPrivateKey_dodgyDataTooShort() PASSED
+
+Asn1LimitTest > fromPrivateKey_dodgyData() PASSED
+
+AESAgreementTest > aesGCMSpreadSplitUpdateDoFinal() FAILED
+    java.lang.SecurityException at AESAgreementTest.java:866
+        Caused by: java.lang.SecurityException at AESAgreementTest.java:866
+            Caused by: java.io.FileNotFoundException at AESAgreementTest.java:866
+
+AESAgreementTest > testAes() FAILED
+    java.lang.SecurityException at AESAgreementTest.java:76
+        Caused by: java.lang.SecurityException at AESAgreementTest.java:866
+            Caused by: java.io.FileNotFoundException at AESAgreementTest.java:866
+
+AESAgreementTest > aesGCMWithAAD() FAILED
+    java.lang.SecurityException at AESAgreementTest.java:961
+        Caused by: java.lang.SecurityException at AESAgreementTest.java:866
+            Caused by: java.io.FileNotFoundException at AESAgreementTest.java:866
+
+AESAgreementTest > aesGCMSpread() FAILED
+    java.lang.SecurityException at AESAgreementTest.java:755
+        Caused by: java.lang.SecurityException at AESAgreementTest.java:866
+            Caused by: java.io.FileNotFoundException at AESAgreementTest.java:866
+
+AESAgreementTest > aesGCMWithTagLen() FAILED
+    java.lang.SecurityException at AESAgreementTest.java:1067
+        Caused by: java.lang.SecurityException at AESAgreementTest.java:866
+            Caused by: java.io.FileNotFoundException at AESAgreementTest.java:866
+
+AESKeyGeneratorTest > testInitFails_notSupported() FAILED
+    java.security.NoSuchProviderException at AESKeyGeneratorTest.java:34
+        Caused by: java.lang.SecurityException at JarVerifier.java:388
+            Caused by: java.io.FileNotFoundException at RandomAccessFile.java:-2
+
+AESKeyGeneratorTest > testGen_basicUse() FAILED
+    java.security.NoSuchProviderException at AESKeyGeneratorTest.java:127
+        Caused by: java.lang.SecurityException at JarVerifier.java:388
+            Caused by: java.io.FileNotFoundException at RandomAccessFile.java:-2
+
+AESKeyGeneratorTest > testGenFails_invalidKeySize() FAILED
+    java.security.NoSuchProviderException at AESKeyGeneratorTest.java:52
+        Caused by: java.lang.SecurityException at JarVerifier.java:388
+            Caused by: java.io.FileNotFoundException at RandomAccessFile.java:-2
+
+AESKeyGeneratorTest > testGen_validKeySizes() FAILED
+    java.security.NoSuchProviderException at AESKeyGeneratorTest.java:113
+        Caused by: java.lang.SecurityException at JarVerifier.java:388
+            Caused by: java.io.FileNotFoundException at RandomAccessFile.java:-2
+
+AESKeyGeneratorTest > testDestroy() FAILED
+    java.security.NoSuchProviderException at AESKeyGeneratorTest.java:146
+        Caused by: java.lang.SecurityException at JarVerifier.java:388
+            Caused by: java.io.FileNotFoundException at RandomAccessFile.java:-2
+
+AESKeyGeneratorTest > testGen_default256() FAILED
+    java.security.NoSuchProviderException at AESKeyGeneratorTest.java:103
+        Caused by: java.lang.SecurityException at JarVerifier.java:388
+            Caused by: java.io.FileNotFoundException at RandomAccessFile.java:-2
+
+AESKeyGeneratorTest > testGenFails_fixedKeySize() FAILED
+    java.security.NoSuchProviderException at AESKeyGeneratorTest.java:68
+        Caused by: java.lang.SecurityException at JarVerifier.java:388
+            Caused by: java.io.FileNotFoundException at RandomAccessFile.java:-2
+
+ARIAAgreementTest > testAria() FAILED
+    java.lang.SecurityException at ARIAAgreementTest.java:71
+        Caused by: java.lang.SecurityException at JarVerifier.java:388
+            Caused by: java.io.FileNotFoundException at RandomAccessFile.java:-2
+
+BlockCipherLimitTest > testCAMELLIAInitParams() PASSED
+
+BlockCipherLimitTest > testBlockCipherUpdate_inputOffsetNegative() PASSED
+
+BlockCipherLimitTest > testBlockCipherUpdate_inputLenNegative() PASSED
+
+BlockCipherLimitTest > testBlockCipherUpdateAAD_inputOffsetNegative() PASSED
+
+BlockCipherLimitTest > BlockCipher_ivIsNull_ArrayNull() PASSED
+
+BlockCipherLimitTest > BlockCipher_modeDoesNotTakeIV() PASSED
+
+BlockCipherLimitTest > testSM4InitParams() PASSED
+
+BlockCipherLimitTest > testBlockCipherUpdate_outputTooSmall_offSetCaused() PASSED
+
+BlockCipherLimitTest > testBlockCipherFinal_outOffNegative() PASSED
+
+BlockCipherLimitTest > testBlockCipherFinal_outputNull() PASSED
+
+BlockCipherLimitTest > testAESInitParams() PASSED
+
+BlockCipherLimitTest > testBlockCipherUpdate_inputOutOfRange_length() PASSED
+
+BlockCipherLimitTest > testBlockCipherUpdate_outputTooSmall_offSetCaused_Edge1() PASSED
+
+BlockCipherLimitTest > testBlockCipherUpdate_inputOutOfRange_offset() PASSED
+
+BlockCipherLimitTest > testBlockCipherUpdateAAD_nullInputArray() PASSED
+
+BlockCipherLimitTest > testBlockCipherUpdate_nullOutputArray() PASSED
+
+BlockCipherLimitTest > BlockCipher_ivIsNull_ArrayZeroLen() PASSED
+
+BlockCipherLimitTest > testBlockCipherUpdate_nullInputArray() PASSED
+
+BlockCipherLimitTest > BlockCipher_keyIsNull() PASSED
+
+BlockCipherLimitTest > testBlockCipherUpdate_blockAlignment() PASSED
+
+BlockCipherLimitTest > testARIAInitParams() PASSED
+
+BlockCipherLimitTest > testUnsupportedCipher() PASSED
+
+BlockCipherLimitTest > testBlockCipherUpdateAAD_inputOutOfRange_length() PASSED
+
+BlockCipherLimitTest > testBlockCipherUpdateAAD_inputOutOfRange_offset() PASSED
+
+BlockCipherLimitTest > testBlockCipherUpdate_outputOffsetNegative() PASSED
+
+BlockCipherLimitTest > testBlockCipherUpdateAAD_inputLenNegative() PASSED
+
+BlockCipherLimitTest > testBlockCipherUpdate_outputTooSmall_lenCaused() PASSED
+
+BlockCipherLimitTest > testBlockCipherUpdate_outputOutOfRange() PASSED
+
+BlockCipherLimitTest > testBlockCipherFinal_outOffOutOfRange() PASSED
+
+BlockCipherLimitTest > testBlockCipherFinal_basicCtrOverflow() PASSED
+
+CAMELLIAAgreementTest > testCamellia() FAILED
+    java.lang.SecurityException at CAMELLIAAgreementTest.java:71
+        Caused by: java.lang.SecurityException at JarVerifier.java:388
+            Caused by: java.io.FileNotFoundException at RandomAccessFile.java:-2
+
+SM4AgreementTest > testSM4() FAILED
+    java.lang.SecurityException at SM4AgreementTest.java:71
+        Caused by: java.lang.SecurityException at JarVerifier.java:388
+            Caused by: java.io.FileNotFoundException at RandomAccessFile.java:-2
+
+MLDSALimitTest > MLDSAServiceJNI_generateKeyPair_seedLenPastEndOfArray() PASSED
+
+MLDSALimitTest > MLDSAServiceJNI_mldsa_verify_sigLenNegative() PASSED
+
+MLDSALimitTest > MLDSAServiceJNI_mldsa_sign_initVerify() PASSED
+
+MLDSALimitTest > MLDSAServiceJNI_decode_1publicKey_inputOffsetNegative() PASSED
+
+MLDSALimitTest > MLDSAServiceJNI_getPrivateKey_outLen() PASSED
+
+MLDSALimitTest > MLDSAServiceJNI_mldsa_update_notInitialised() PASSED
+
+MLDSALimitTest > MLDSAServiceJNI_decode_1privateKey_inputOutOfRange_1() PASSED
+
+MLDSALimitTest > MLDSAServiceJNI_decode_1privateKey_inputOutOfRange_2() PASSED
+
+MLDSALimitTest > MLDSAServiceJNI_mldsa_verify_initForSigning() PASSED
+
+MLDSALimitTest > MLDSAServiceJNI_generateKeyPair_invalidSeedLength() PASSED
+
+MLDSALimitTest > MLDSAServiceJNI_decode_1publicKey_inputLenNegative() PASSED
+
+MLDSALimitTest > MLDSAServiceJNI_mldsa_update_inputOffsetNegative() PASSED
+
+MLDSALimitTest > MLDSAServiceJNI_initSign_nullKey() PASSED
+
+MLDSALimitTest > MLDSAServiceJNI_decode_1privateKey_inputOffsetNegative() PASSED
+
+MLDSALimitTest > MLDSAServiceJNI_generateKeyPair_seedLenNegative() PASSED
+
+MLDSALimitTest > MLDSAServiceJNI_decode_1privateKey_keyType() PASSED
+
+MLDSALimitTest > MLDSAServiceJNI_decode_1publicKey_keyType() PASSED
+
+MLDSALimitTest > testMLDSAGenerateKeyPair_keyGenWrongType() PASSED
+
+MLDSALimitTest > MLDSAServiceJNI_getSeed_nullKeyRef() PASSED
+
+MLDSALimitTest > MLDSAServiceJNI_initVerify_keySpecNullKey() PASSED
+
+MLDSALimitTest > MLDSAServiceJNI_mldsa_verify_nullSig() PASSED
+
+MLDSALimitTest > MLDSAServiceJNI_getPublicKey_nullKeyRef() PASSED
+
+MLDSALimitTest > MLDSAServiceJNI_mldsa_update_nullInput() PASSED
+
+MLDSALimitTest > MLDSAServiceJNI_initVerify_unknownMuMode() PASSED
+
+MLDSALimitTest > MLDSAServiceJNI_mldsa_sign_outputTooSmall_1() PASSED
+
+MLDSALimitTest > MLDSAServiceJNI_mldsa_sign_outputTooSmall_2() PASSED
+
+MLDSALimitTest > MLDSAServiceJNI_decode_1privateKey_openSSLErrorOnBrokenInput() PASSED
+
+MLDSALimitTest > MLDSAServiceJNI_mldsa_verify_sigLenOutOfRange_1() PASSED
+
+MLDSALimitTest > MLDSAServiceJNI_mldsa_verify_sigLenOutOfRange_2() PASSED
+
+MLDSALimitTest > MLDSAServiceJNI_generateKeyPair_noSeedButLength() PASSED
+
+MLDSALimitTest > MLDSAServiceJNI_decode_1privateKey_inputWrongSize4KeyType() PASSED
+
+MLDSALimitTest > MLDSAServiceJNI_mldsa_sign_outputRange() PASSED
+
+MLDSALimitTest > MLDSAServiceJNI_mldsa_update_inputOutOfRange_1() PASSED
+
+MLDSALimitTest > MLDSAServiceJNI_mldsa_update_inputOutOfRange_2() PASSED
+
+MLDSALimitTest > MLDSAServiceJNI_initSign_keySpecNullKey() PASSED
+
+MLDSALimitTest > MLDSAServiceJNI_decode_1publicKey_nullKeySpec() PASSED
+
+MLDSALimitTest > MLDSAServiceJNI_decode_1publicKey_inputWrongSize4KeyType() PASSED
+
+MLDSALimitTest > MLDSAServiceJNI_initSign_unknownMuMode() PASSED
+
+MLDSALimitTest > MLDSAServiceJNI_mldsa_update_inputLenNegative() PASSED
+
+MLDSALimitTest > MLDSAServiceJNI_initVerify_ctxLenPastEndOfContext_1() PASSED
+
+MLDSALimitTest > MLDSAServiceJNI_initVerify_ctxLenPastEndOfContext_2() PASSED
+
+MLDSALimitTest > MLDSAServiceJNI_decode_1publicKey_inputNull() PASSED
+
+MLDSALimitTest > MLDSAServiceJNI_decode_1privateKey_inputNull() PASSED
+
+MLDSALimitTest > MLDSAServiceJNI_initSign_ctxLenPastEndOfContext_1() PASSED
+
+MLDSALimitTest > MLDSAServiceJNI_initSign_ctxLenPastEndOfContext_2() PASSED
+
+MLDSALimitTest > MLDSAServiceJNI_getPrivateKey_nullKeyRef() PASSED
+
+MLDSALimitTest > MLDSAServiceJNI_getPrivateKey_keyRefNullKey() PASSED
+
+MLDSALimitTest > MLDSAServiceJNI_initVerify_nullKey() PASSED
+
+MLDSALimitTest > MLDSAServiceJNI_decode_1publicKey_keyLength() PASSED
+
+MLDSALimitTest > MLDSAServiceJNI_getPublicKey_keyRefNullKey() PASSED
+
+MLDSALimitTest > MLDSAServiceJNI_mldsa_sign_outOffsetNegative() PASSED
+
+MLDSALimitTest > MLDSAServiceJNI_decode_1privateKey_keyLength() PASSED
+
+MLDSALimitTest > MLDSAServiceJNI_getPublicKey_outLen() PASSED
+
+MLDSALimitTest > MLDSAServiceJNI_initVerify_invalidMuMode() PASSED
+
+MLDSALimitTest > MLDSAServiceJNI_mldsa_sign_notInitialized() PASSED
+
+MLDSALimitTest > MLDSAServiceJNI_initVerify_ctxTooLong() PASSED
+
+MLDSALimitTest > MLDSAServiceJNI_getSeed_keyRefNullKey() PASSED
+
+MLDSALimitTest > MLDSAServiceJNI_generateKeyPair_seedIsNull() PASSED
+
+MLDSALimitTest > MLDSAServiceJNI_decode_1publicKey_inputOutOfRange_1() PASSED
+
+MLDSALimitTest > MLDSAServiceJNI_decode_1publicKey_inputOutOfRange_2() PASSED
+
+MLDSALimitTest > MLDSAServiceJNI_initSign_ctxTooLong() PASSED
+
+MLDSALimitTest > MLDSAServiceJNI_mldsa_sign_outputTooSmall_muOnly_1() PASSED
+
+MLDSALimitTest > MLDSAServiceJNI_mldsa_sign_outputTooSmall_muOnly_2() PASSED
+
+MLDSALimitTest > MLDSAServiceJNI_getSeed_outLen() PASSED
+
+MLDSALimitTest > MLDSAServiceJNI_decode_1privateKey_inputLenNegative() PASSED
+
+MLDSALimitTest > MLDSAServiceJNI_mldsa_verify_sigLenZero() PASSED
+
+MLDSALimitTest > MLDSAServiceJNI_initVerify_nullContextArray() PASSED
+
+MLDSALimitTest > MLDSAServiceJNI_initSign_nullContextArray() PASSED
+
+MLDSALimitTest > MLDSAServiceJNI_generateKeyPair_seedWrongKeyType() PASSED
+
+MLDSATest > nullMessageOnUpdateFails() PASSED
+
+MLDSATest > testSingleByteUpdateVerify() PASSED
+
+MLDSATest > testSignVerifyWithCustomContextAndReuse() PASSED
+
+MLDSATest > testChangeContextToNullAfterTakingSignature() PASSED
+
+MLDSATest > testChangeContextAfterTakingSignature() PASSED
+
+MLDSATest > testCustomParameterSpec() PASSED
+
+MLDSATest > testMLDSASignature() PASSED
+
+MLDSATest > testCalculateRawMuProxyKey() PASSED
+
+MLDSATest > testInitSignWrongClass() PASSED
+
+MLDSATest > testLoadRawKey() PASSED
+
+MLDSATest > testInitVerifyWrongClass() PASSED
+
+MLDSATest > initSignWithForcedSpec() PASSED
+
+MLDSATest > testIncorrectForcedType_KeyPairGenerator() PASSED
+
+MLDSATest > initVerifyWithForcedSpec() PASSED
+
+MLDSATest > generateFromSeed() PASSED
+
+MLDSATest > testSignVerifyWithReuse() PASSED
+
+MLDSATest > testSingleByteUpdateSign() PASSED
+
+MLDSATest > keyFactoryByNameTest() PASSED
+
+MLDSATest > testSetParamsAfterUpdateFails() PASSED
+
+MLDSATest > nullSignatureOnVerifyFails() PASSED
+
+MLDSATest > testKeyGen() PASSED
+
+MLDSATest > testKeyRecovery() PASSED
+
+MLDSATest > testSignVerifyWithContextAndReuse() PASSED
+
+MLDSATest > testUnknownAlgorithm() PASSED
+
+MLDSATest > testUnknownParameterSpec() PASSED
+
+MLDSATest > testCalculateRawMu() PASSED
+
+MLDSOpsTest > MLDSAService_getPublicKey_OutputInt32Overflow() PASSED
+
+MLDSOpsTest > MLDSAServiceJNI_getPrivateKey_accessByteArray() PASSED
+
+MLDSOpsTest > MLDSAServiceJNI_decode_1publicKey_openSSLErrorDecoding() PASSED
+
+MLDSOpsTest > MLDSAServiceJNI_getPublicKey_accessByteArray() PASSED
+
+MLDSOpsTest > MLDSAServiceJNI_mldsa_update_osslError_internalMu() PASSED
+
+MLDSOpsTest > MLDSAServiceJNI_getSeed_accessByteArray() PASSED
+
+MLDSOpsTest > MLDSAServiceJNI_mldsa_verify_accessSigBytes() PASSED
+
+MLDSOpsTest > MLDSAServiceJNI__initSign_EVP_PKEY_sign_message_init() PASSED
+
+MLDSOpsTest > MLDSAService_getPublicKey_OpenSSLError_1() PASSED
+
+MLDSOpsTest > MLDSAService_getPublicKey_OpenSSLError_2() PASSED
+
+MLDSOpsTest > MLDSAServiceJNI_generateKeyPair_seedLenNegative() PASSED
+
+MLDSOpsTest > MLDSAServiceJNI_mldsa_update_osslError_extMu() PASSED
+
+MLDSOpsTest > MLDSAServiceJNI_mldsa_update_accessInputArray() PASSED
+
+MLDSOpsTest > MLDSAService_getPrivateKey_OpenSSLError_1() PASSED
+
+MLDSOpsTest > MLDSAService_getPrivateKey_OpenSSLError_2() PASSED
+
+MLDSOpsTest > MLDSAServiceJNI_mldsa_sign_outputRange() PASSED
+
+MLDSOpsTest > MLDSAServiceJNI_mldsa_sign_osslErrorCalculatingSig() PASSED
+
+MLDSOpsTest > MLDSAServiceJNI_decode_1privateKey_accessByteArray() PASSED
+
+MLDSOpsTest > MLDSAServiceJNI_getSeed_OpenSSLError() PASSED
+
+MLDSOpsTest > MLDSAServiceJNI_mldsa_verify_osslError() PASSED
+
+MLDSOpsTest > MLDSAServiceJNI_mldsa_sign_osslErrorGettingLen() PASSED
+
+MLDSOpsTest > MLDSAService_getPrivateKey_OutputInt32Overflow() PASSED
+
+MLDSOpsTest > MLDSAServiceJNI_mldsa_sign_unexpectedSigLenChange() PASSED
+
+MLDSOpsTest > MLDSAServiceJNI_decode_1publicKey_accessByteArray() PASSED
+
+MLDSOpsTest > MLDSAServiceJNI__initSign_createPKEYCTX() PASSED
+
+MLDSOpsTest > MLDSAServiceJNI__initVerify_createPKEYCTX() PASSED
+
+MLDSOpsTest > MLDSAServiceJNI_getSeed_OutputInt32Overflow() PASSED
+
+MLDSOpsTest > testMLDSAGenerateKeyPair_openSSLError() PASSED
+
+MLDSOpsTest > MLDSAServiceJNI__initVerify_accessContextArray() PASSED
+
+MLDSOpsTest > MLDSAServiceJNI__initVerify_EVP_PKEY_sign_message_init() PASSED
+
+MLDSOpsTest > MLDSAServiceJNI__initSign_accessContextArray() PASSED
+
+MLKEMLimitTest > MLKEMServiceJNI_decode_1publicKey_inputLenNegative() PASSED
+
+MLKEMLimitTest > MLKEMServiceJNI_decode_1publicKey_inputNull() PASSED
+
+MLKEMLimitTest > MLKEMServiceJNI_decode_1publicKey_inputOutOfRange_1() PASSED
+
+MLKEMLimitTest > MLKEMServiceJNI_decode_1publicKey_inputOutOfRange_2() PASSED
+
+MLKEMLimitTest > MLKEMServiceJNI_getSeed_keyRefNullKey() PASSED
+
+MLKEMLimitTest > MLKEMServiceJNI_getPrivateKey_keyRefNullKey() PASSED
+
+MLKEMLimitTest > MLKEMServiceJNI_getPrivateKey_outLen() PASSED
+
+MLKEMLimitTest > MLKEMServiceJNI_getPublicKey_nullKeyRef() PASSED
+
+MLKEMLimitTest > MLKEMServiceJNI_getSeed_outLen() PASSED
+
+MLKEMLimitTest > testMLKEMGenerateKeyPair_keyGenWrongType() PASSED
+
+MLKEMLimitTest > MLKEMServiceJNI_generateKeyPair_invalidSeedLength() PASSED
+
+MLKEMLimitTest > MLKEMServiceJNI_generateKeyPair_seedLenNegative() PASSED
+
+MLKEMLimitTest > MLKEMServiceJNI_getPublicKey_keyRefNullKey() PASSED
+
+MLKEMLimitTest > MLKEMServiceJNI_getPrivateKey_nullKeyRef() PASSED
+
+MLKEMLimitTest > MLKEMServiceJNI_generateKeyPair_seedLenPastEndOfArray() PASSED
+
+MLKEMLimitTest > MLKEMServiceJNI_getPublicKey_outLen() PASSED
+
+MLKEMLimitTest > MLKEMServiceJNI_decode_1publicKey_inputOffsetNegative() PASSED
+
+MLKEMLimitTest > MLKEMServiceJNI_generateKeyPair_seedWrongKeyType() PASSED
+
+MLKEMLimitTest > MLKEMServiceJNI_generateKeyPair_seedIsNull() PASSED
+
+MLKEMLimitTest > MLKEMServiceJNI_generateKeyPair_noSeedButLength() PASSED
+
+MLKEMLimitTest > MLKEMServiceJNI_getSeed_nullKeyRef() PASSED
+
+MLKEMLimitTest > MLKEMServiceJNI_decode_1publicKey_nullKeySpec() PASSED
+
+MLKEMOpsTest > MLKEMServiceJNI_decode_1publicKey_accessByteArray() PASSED
+
+MLKEMOpsTest > MLKEMServiceJNI_getSeed_accessByteArray() PASSED
+
+MLKEMOpsTest > MLKEMService_getPublicKey_OpenSSLError_1() PASSED
+
+MLKEMOpsTest > MLKEMService_getPublicKey_OpenSSLError_2() PASSED
+
+MLKEMOpsTest > testMLKEMGenerateKeyPair_openSSLError() PASSED
+
+MLKEMOpsTest > MLKEMServiceJNI_getSeed_OutputInt32Overflow() PASSED
+
+MLKEMOpsTest > MLKEMServiceJNI_decode_1privateKey_accessByteArray() PASSED
+
+MLKEMOpsTest > MLKEMService_getPublicKey_OutputInt32Overflow() PASSED
+
+MLKEMOpsTest > MLKEMService_getPrivateKey_OpenSSLError_1() PASSED
+
+MLKEMOpsTest > MLKEMService_getPrivateKey_OpenSSLError_2() PASSED
+
+MLKEMOpsTest > MLKEMServiceJNI_getPrivateKey_accessByteArray() PASSED
+
+MLKEMOpsTest > MLKEMServiceJNI_generateKeyPair_seedLenNegative() PASSED
+
+MLKEMOpsTest > MLKEMServiceJNI_getPublicKey_accessByteArray() PASSED
+
+MLKEMOpsTest > MLKEMServiceJNI_getSeed_OpenSSLError() PASSED
+
+MLKEMOpsTest > MLKEMService_getPrivateKey_OutputInt32Overflow() PASSED
+
+MLKEMOpsTest > MLKEMServiceJNI_decode_1publicKey_openSSLErrorDecoding() PASSED
+
+MLKEMTest > testKeyExchangeJSLToBC() FAILED
+    java.security.NoSuchProviderException at MLKEMTest.java:178
+        Caused by: java.lang.SecurityException at JarVerifier.java:388
+            Caused by: java.io.FileNotFoundException at RandomAccessFile.java:-2
+
+MLKEMTest > basicJSLtoJSLTest() FAILED
+    java.security.NoSuchProviderException at MLKEMTest.java:133
+        Caused by: java.lang.SecurityException at JarVerifier.java:388
+            Caused by: java.io.FileNotFoundException at RandomAccessFile.java:-2
+
+MLKEMTest > testKeyExchangeBCToJSL() FAILED
+    java.security.NoSuchProviderException at MLKEMTest.java:233
+        Caused by: java.lang.SecurityException at JarVerifier.java:388
+            Caused by: java.io.FileNotFoundException at RandomAccessFile.java:-2
+
+MLKEMTest > testIncorrectForcedType_KeyPairGenerator() PASSED
+
+MLKEMTest > keyFactoryByNameTest() PASSED
+
+MLKEMTest > testUnknownAlgorithm() PASSED
+
+SLHDSALimitTest > SLHDSAServiceJNI_slhdsa_sign_outputTooSmall_1() PASSED
+
+SLHDSALimitTest > SLHDSAServiceJNI_slhdsa_sign_outputTooSmall_2() PASSED
+
+SLHDSALimitTest > SLHDSAServiceJNI_slhdsa_verify_sigLenOutOfRange_1() PASSED
+
+SLHDSALimitTest > SLHDSAServiceJNI_slhdsa_verify_sigLenOutOfRange_2() PASSED
+
+SLHDSALimitTest > SLHDSAServiceJNI_getPublicKey_outLen() PASSED
+
+SLHDSALimitTest > SLHDSAServiceJNI_decode_1publicKey_inputWrongSize4KeyType() PASSED
+
+SLHDSALimitTest > SLHDSAServiceJNI_initSign_ctxLenPastEndOfContext_1() PASSED
+
+SLHDSALimitTest > SLHDSAServiceJNI_initSign_ctxLenPastEndOfContext_2() PASSED
+
+SLHDSALimitTest > SLHDSAServiceJNI_initVerify_nullContextArray() PASSED
+
+SLHDSALimitTest > SLHDSAServiceJNI_slhdsa_verify_nullSig() PASSED
+
+SLHDSALimitTest > SLHDSAServiceJNI_slhdsa_update_inputLenNegative() PASSED
+
+SLHDSALimitTest > SLHDSAServiceJNI_initSign_ctxTooLong() PASSED
+
+SLHDSALimitTest > SLHDSAServiceJNI_initSign_nullKey() PASSED
+
+SLHDSALimitTest > SLHDSAServiceJNI_decode_1publicKey_inputLenNegative() PASSED
+
+SLHDSALimitTest > SLHDSAServiceJNI_slhdsa_sign_initVerify() PASSED
+
+SLHDSALimitTest > SLHDSAServiceJNI_generateKeyPair_seedLenPastEndOfArray() PASSED
+
+SLHDSALimitTest > SLHDSAServiceJNI_getPublicKey_nullKeyRef() PASSED
+
+SLHDSALimitTest > SLHDSAServiceJNI_decode_1publicKey_inputOffsetNegative() PASSED
+
+SLHDSALimitTest > SLHDSAServiceJNI_decode_1privateKey_inputOffsetNegative() PASSED
+
+SLHDSALimitTest > SLHDSAServiceJNI_decode_1privateKey_keyType() PASSED
+
+SLHDSALimitTest > SLHDSAServiceJNI_decode_1privateKey_inputNull() PASSED
+
+SLHDSALimitTest > SLHDSAServiceJNI_initVerify_ctxLenPastEndOfContext_1() PASSED
+
+SLHDSALimitTest > SLHDSAServiceJNI_initVerify_ctxLenPastEndOfContext_2() PASSED
+
+SLHDSALimitTest > SLHDSAServiceJNI_generateKeyPair_incorrectSeedLen() PASSED
+
+SLHDSALimitTest > SLHDSAServiceJNI_initVerify_ctxTooLong() PASSED
+
+SLHDSALimitTest > SLHDSAServiceJNI_getPrivateKey_outLen() PASSED
+
+SLHDSALimitTest > SLHDSAServiceJNI_getSeed_keyRefNullKey() PASSED
+
+SLHDSALimitTest > SLHDSAServiceJNI_initSign_keySpecNullKey() PASSED
+
+SLHDSALimitTest > SLHDSAServiceJNI_initSign_nullContextArray() PASSED
+
+SLHDSALimitTest > SLHDSAServiceJNI_getSeed_nullKeyRef() PASSED
+
+SLHDSALimitTest > SLHDSAServiceJNI_decode_1privateKey_keyLength() PASSED
+
+SLHDSALimitTest > SLHDSAServiceJNI_slhdsa_sign_notInitialized() PASSED
+
+SLHDSALimitTest > SLHDSAServiceJNI_initSign_unknownMessageEncoding() PASSED
+
+SLHDSALimitTest > SLHDSAServiceJNI_initSign_unknownDeterminisiticParam() PASSED
+
+SLHDSALimitTest > SLHDSAServiceJNI_generateKeyPair_invalidSeedLength_128() PASSED
+
+SLHDSALimitTest > SLHDSAServiceJNI_generateKeyPair_invalidSeedLength_192() PASSED
+
+SLHDSALimitTest > SLHDSAServiceJNI_generateKeyPair_invalidSeedLength_256() PASSED
+
+SLHDSALimitTest > SLHDSAServiceJNI_initVerify_unknownDetParam() PASSED
+
+SLHDSALimitTest > SLHDSAServiceJNI_decode_1publicKey_inputOutOfRange_1() PASSED
+
+SLHDSALimitTest > SLHDSAServiceJNI_decode_1publicKey_inputOutOfRange_2() PASSED
+
+SLHDSALimitTest > SLHDSAServiceJNI_slhdsa_update_inputOffsetNegative() PASSED
+
+SLHDSALimitTest > SLHDSAServiceJNI_generateKeyPair_seedLenNegative() PASSED
+
+SLHDSALimitTest > SLHDSAServiceJNI_slhdsa_verify_sigLenNegative() PASSED
+
+SLHDSALimitTest > SLHDSAServiceJNI_decode_1privateKey_inputOutOfRange_1() PASSED
+
+SLHDSALimitTest > SLHDSAServiceJNI_decode_1privateKey_inputOutOfRange_2() PASSED
+
+SLHDSALimitTest > testSLHDSAGenerateKeyPair_keyGenWrongType() PASSED
+
+SLHDSALimitTest > SLHDSAServiceJNI_decode_1privateKey_inputLenNegative() PASSED
+
+SLHDSALimitTest > SLHDSAServiceJNI_slhdsa_update_notInitialised() PASSED
+
+SLHDSALimitTest > SLHDSAServiceJNI_getPrivateKey_nullKeyRef() PASSED
+
+SLHDSALimitTest > SLHDSAServiceJNI_slhdsa_verify_initForSigning() PASSED
+
+SLHDSALimitTest > SLHDSAServiceJNI_generateKeyPair_seedWrongKeyType() PASSED
+
+SLHDSALimitTest > SLHDSAServiceJNI_slhdsa_update_inputOutOfRange_1() PASSED
+
+SLHDSALimitTest > SLHDSAServiceJNI_slhdsa_update_inputOutOfRange_2() PASSED
+
+SLHDSALimitTest > SLHDSAServiceJNI_decode_1publicKey_keyType() PASSED
+
+SLHDSALimitTest > SLHDSAServiceJNI_slhdsa_update_nullInput() PASSED
+
+SLHDSALimitTest > SLHDSAServiceJNI_decode_1publicKey_inputNull() PASSED
+
+SLHDSALimitTest > SLHDSAServiceJNI_getPublicKey_keyRefNullKey() PASSED
+
+SLHDSALimitTest > SLHDSAServiceJNI_slhdsa_verify_sigLenZero() PASSED
+
+SLHDSALimitTest > SLHDSAServiceJNI_initVerify_nullKey() PASSED
+
+SLHDSALimitTest > SLHDSAServiceJNI_initVerify_keySpecNullKey() PASSED
+
+SLHDSALimitTest > SLHDSAServiceJNI_generateKeyPair_noSeedButLength() PASSED
+
+SLHDSALimitTest > SLHDSAServiceJNI_getPrivateKey_keyRefNullKey() PASSED
+
+SLHDSALimitTest > SLHDSAServiceJNI_slhdsa_sign_outputRange() PASSED
+
+SLHDSALimitTest > SLHDSAServiceJNI_generateKeyPair_seedIsNull() PASSED
+
+SLHDSALimitTest > SLHDSAServiceJNI_slhdsa_sign_outOffsetNegative() PASSED
+
+SLHDSALimitTest > SLHDSAServiceJNI_initVerify_unknownMessageEncodingParam() PASSED
+
+SLHDSALimitTest > SLHDSAServiceJNI_getSeed_outLen() PASSED
+
+SLHDSALimitTest > SLHDSAServiceJNI_decode_1publicKey_nullKeySpec() PASSED
+
+SLHDSAOpsTest > SLHDSAServiceJNI_slhdsa_sign_osslErrorCalculatingSig() PASSED
+
+SLHDSAOpsTest > SLHDSAServiceJNI_slhdsa_verify_osslError() PASSED
+
+SLHDSAOpsTest > SLHDSAServiceJNI__initVerify_EVP_PKEY_sign_message_init() PASSED
+
+SLHDSAOpsTest > SLHDSAServiceJNI_getPrivateKey_OpenSSLError_1() PASSED
+
+SLHDSAOpsTest > SLHDSAServiceJNI_getPrivateKey_OpenSSLError_2() PASSED
+
+SLHDSAOpsTest > SLHDSAServiceJNI_decode_1publicKey_accessByteArray() PASSED
+
+SLHDSAOpsTest > SLHDSAServiceJNI_decode_1publicKey_openSSLErrorDecoding() PASSED
+
+SLHDSAOpsTest > SLHDSAServiceJNI_getPublicKey_OpenSSLError() PASSED
+
+SLHDSAOpsTest > SLHDSAServiceJNI_getPrivateKey_OutputInt32Overflow() PASSED
+
+SLHDSAOpsTest > SLHDSAServiceJNI__initVerify_createPKEYCTX() PASSED
+
+SLHDSAOpsTest > SLHDSAServiceJNI_decode_1privateKey_openSSLErrorDecoding() PASSED
+
+SLHDSAOpsTest > SLHDSAServiceJNI_getPublicKey_OutputInt32Overflow() PASSED
+
+SLHDSAOpsTest > SLHDSAServiceJNI_slhdsa_update_osslError_extMu() PASSED
+
+SLHDSAOpsTest > SLHDSAServiceJNI_getPrivateKey_accessByteArray() PASSED
+
+SLHDSAOpsTest > SLHDSAServiceJNI_decode_1privateKey_accessByteArray() PASSED
+
+SLHDSAOpsTest > SLHDSAServiceJNI_generateKeyPair_seedLenNegative() PASSED
+
+SLHDSAOpsTest > SLHDSAServiceJNI__initSign_createPKEYCTX() PASSED
+
+SLHDSAOpsTest > SLHDSAServiceJNI__initSign_EVP_PKEY_sign_message_init() PASSED
+
+SLHDSAOpsTest > SLHDSAServiceJNI_slhdsa_verify_accessSigBytes() PASSED
+
+SLHDSAOpsTest > SLHDSAServiceJNI__initSign_accessContextArray() PASSED
+
+SLHDSAOpsTest > SLHDSAServiceJNI__initVerify_accessContextArray() PASSED
+
+SLHDSAOpsTest > SLHDSAServiceJNI_slhdsa_sign_unexpectedSigLenChange() PASSED
+
+SLHDSAOpsTest > SLHDSAServiceJNI_slhdsa_sign_outputRange() PASSED
+
+SLHDSAOpsTest > SLHDSAServiceJNI_getPublicKey_accessByteArray() PASSED
+
+SLHDSAOpsTest > SLHDSAServiceJNI_slhdsa_sign_osslErrorGettingLen() PASSED
+
+SLHDSAOpsTest > SLHDSAServiceJNI_slhdsa_update_accessInputArray() PASSED
+
+SLHDSAOpsTest > testSLHDSAGenerateKeyPair_openSSLError() PASSED
+
+SLHDSATest > nullMessageOnUpdateFails() PASSED
+<===========--> 89% EXECUTING [1m 31s]
+
+SLHDSATest > testSLHDSASignature() PASSEDsl.jostle.test.slhdsa.SLHDSATest
+
+SLHDSATest > testSingleByteUpdateVerify() PASSED
+
+SLHDSATest > testChangeContextToNullAfterTakingSignature() PASSED
+
+SLHDSATest > testChangeContextAfterTakingSignature() PASSED
+
+SLHDSATest > testInitSignWrongClass() PASSED
+
+SLHDSATest > testInitVerifyWrongClass() PASSED
+
+SLHDSATest > testInitSignWithForcedKeySpec() PASSED
+
+SLHDSATest > testIncorrectForcedType_KeyPairGenerator() PASSED
+
+SLHDSATest > testSignVerifyWithReuse() PASSED
+
+SLHDSATest > testSingleByteUpdateSign() PASSED
+
+SLHDSATest > testDeterministic() PASSED
+
+SLHDSATest > keyFactoryByNameTest() PASSED
+
+SLHDSATest > testSetParamsAfterUpdateFails() PASSED
+
+SLHDSATest > testNondeterministicByDefault() PASSED
+
+SLHDSATest > nullSignatureOnVerifyFails() PASSED
+
+SLHDSATest > testKeyGen() PASSED
+
+SLHDSATest > testKeyRecovery() PASSED
+
+SLHDSATest > testSignVerifyWithContextAndReuse() PASSED
+
+SLHDSATest > testUnknownAlgorithm() PASSED
+
+SLHDSATest > testUnknownParameterSpec() PASSED
+
+SLHDSATest > testInitVerifyWithForcedKeySpec() PASSED
+
+SpecLimitTest > encap_inOffsetNegative() PASSED
+
+SpecLimitTest > decap_inOffsetNegative() PASSED
+
+SpecLimitTest > encap_outputOffsetNegative() PASSED
+
+SpecLimitTest > encap_outputRangeCheck_1() PASSED
+
+SpecLimitTest > encap_outputRangeCheck_2() PASSED
+
+SpecLimitTest > encap_outputRangeCheck_3() PASSED
+
+SpecLimitTest > encap_outputTooSmall_3() PASSED
+
+SpecLimitTest > decap_outputTooSmall_3() PASSED
+
+SpecLimitTest > decap_keySpecWithNullKey() PASSED
+
+SpecLimitTest > decap_outputOffsetNegative() PASSED
+
+SpecLimitTest > encap_inLenNegative() PASSED
+
+SpecLimitTest > decap_outputRangeCheck_1() PASSED
+
+SpecLimitTest > decap_outputRangeCheck_2() PASSED
+
+SpecLimitTest > decap_outputRangeCheck_3() PASSED
+
+SpecLimitTest > decap_outputLenNegative() PASSED
+
+SpecLimitTest > decap_nullKeySpec() PASSED
+
+SpecLimitTest > encap_outputLenNegative() PASSED
+
+SpecLimitTest > decap_inputRangeCheck_1() PASSED
+
+SpecLimitTest > decap_inputRangeCheck_2() PASSED
+
+SpecLimitTest > decap_inputRangeCheck_3() PASSED
+
+SpecLimitTest > encap_inputRangeCheck_1() PASSED
+
+SpecLimitTest > encap_inputRangeCheck_2() PASSED
+
+SpecLimitTest > encap_inputRangeCheck_3() PASSED
+
+SpecLimitTest > decap_inLenNegative() PASSED
+
+SpecLimitTest > encap_nullKeySpec() PASSED
+
+SpecLimitTest > encap_keySpecWithNullKey() PASSED
+
+SpecOpsTest > encap_opsString() PASSED
+
+SpecOpsTest > decap_pkey_ctx_create() PASSED
+
+SpecOpsTest > decap_EVP_PKEY_CTX_set_kem_op() PASSED
+
+SpecOpsTest > encap_inputArrayAccess() PASSED
+
+SpecOpsTest > decap_inputArrayAccess() PASSED
+
+SpecOpsTest > decap_minLenOverflowInt32() PASSED
+
+SpecOpsTest > encap_pkey_ctx_create() PASSED
+
+SpecOpsTest > decap_EVP_PKEY_decapsulate_init() PASSED
+
+SpecOpsTest > decap_outputArrayAccess() PASSED
+
+SpecOpsTest > encap_outputArrayAccess() PASSED
+
+SpecOpsTest > decap_EVP_PKEY_decapsulate_1() PASSED
+
+SpecOpsTest > encap_minLenOverflowInt32() PASSED
+
+SpecOpsTest > encap_EVP_PKEY_encapsulate_init() PASSED
+
+SpecOpsTest > decap_opsString() PASSED
+
+SpecOpsTest > encap_EVP_PKEY_encapsulate() PASSED
+
+SpecOpsTest > encap_EVP_PKEY_encapsulate_1() PASSED
+
+SpecOpsTest > encap_EVP_PKEY_CTX_set_kem_op() PASSED
+
+SpecOpsTest > decap_EVP_PKEY_decapsulate() PASSED
+
+404 tests completed, 18 failed
+
+> Task :jostle:test FAILED
+
+[Incubating] Problems report is available at: file:///home/ubuntu/openssl-jostle/build/reports/problems/problems-report.html
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':jostle:test'.
+> There were failing tests. See the report at: file:///home/ubuntu/openssl-jostle/jostle/build/reports/tests/test/index.html
+
+* Try:
+> Run with --scan to generate a Build Scan (Powered by Develocity).
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 10.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/9.1.0/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD FAILED in 2m 56s
+12 actionable tasks: 12 executed

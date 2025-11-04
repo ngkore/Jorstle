@@ -49,7 +49,7 @@ cd ..
 
 ### 3. Install Java 25
 
-Download and install Java Development Kit 25 (any provider will work, Oracle JDK is used here):
+Download and install Java Development Kit 25 (any provider will work, [Oracle JDK](https://www.oracle.com/java/technologies/downloads/) is used here):
 
 ```bash
 wget https://download.oracle.com/java/25/latest/jdk-25_linux-x64_bin.deb
@@ -57,13 +57,15 @@ sudo dpkg -i jdk-25_linux-x64_bin.deb
 java --version
 ```
 
+![java version](./images/java-verify.png)
+
 Configure Java environment variables:
 
 ```bash
 readlink -f $(which java)
 ```
 
-![alt text](./images/check-java-env-path.png)
+![check java](./images/check-java-env-path.png)
 
 ```bash
 export JAVA_HOME=/usr/lib/jvm/jdk-25.0.1-oracle-x64
@@ -72,7 +74,7 @@ export PATH=$JAVA_HOME/bin:$PATH
 
 ### 4. Install CMake
 
-Download and install CMake 4.1.2 (any version >= 3.31 will work):
+Download and install CMake 4.1.2 (or any version >= 3.31 will work), see https://github.com/Kitware/CMake/releases/:
 
 ```bash
 wget https://github.com/Kitware/CMake/releases/download/v4.1.2/cmake-4.1.2-linux-x86_64.tar.gz
@@ -81,6 +83,8 @@ sudo cp -r cmake-4.1.2-linux-x86_64 /opt/cmake
 sudo ln -s /opt/cmake/bin/cmake /usr/local/bin/cmake
 cmake --version
 ```
+
+![cmake version](./images/cmake-verify.png)
 
 ### 5. Build OpenSSL JOSTLE
 
@@ -96,6 +100,8 @@ Generate Java headers:
 ```bash
 ./gradlew clean compileJava
 ```
+
+![cmd compileJava](./images/compile-java-gradlew.png)
 
 Enable operations testing support (optional):
 
@@ -123,6 +129,8 @@ Build the final jar:
 ./gradlew clean build -x test
 ```
 
+![build success](./images/build-clean-skip-tests.png)
+
 ### 6. Verify Installation
 
 Run the DumpInfo utility to verify successful deployment:
@@ -133,12 +141,16 @@ java --module-path jostle/build/libs/openssl-jostle-1.0-SNAPSHOT.jar \
 --module org.openssl.jostle.prov/org.openssl.jostle.util.DumpInfo
 ```
 
+![DumpInfo Utility](./images/dumpinfo-util.png)
+
 ## Build Output
 
 The compiled jar file will be located at:
 
 ```
+
 jostle/build/libs/openssl-jostle-1.0-SNAPSHOT.jar
+
 ```
 
 ## Interface Selection
